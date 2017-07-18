@@ -1,4 +1,4 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 
 class Ticket2 implements Runnable{
 	private int num = 100;
@@ -7,7 +7,7 @@ class Ticket2 implements Runnable{
 		while(true){
 			show();
 			if(num<=0){
-				System.out.println("["+Thread.currentThread().getName()+"]£º"+"Æ±ÒÑÊÛ¹â");
+				System.out.println("["+Thread.currentThread().getName()+"]ï¼š"+"ç¥¨å·²å”®å…‰");
 				break;
 			}
 		}
@@ -21,7 +21,7 @@ class Ticket2 implements Runnable{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.println("["+Thread.currentThread().getName()+"]...ÊÛ³ö.."+num--+"ºÅ");
+			System.out.println("["+Thread.currentThread().getName()+"]...å”®å‡º.."+num--+"å·");
 		}
 	}
 }
@@ -29,10 +29,10 @@ class Ticket2 implements Runnable{
 public class TicketDemo3 {
 	public static void main(String[] args) {
 		Ticket2 d = new Ticket2();
-		Thread t1 = new Thread(d,"Ò»ºÅ´°¿Ú");
-		Thread t2 = new Thread(d,"¶þºÅ´°¿Ú");
-		Thread t3 = new Thread(d,"ÈýºÅ´°¿Ú");
-		Thread t4 = new Thread(d,"ËÄºÅ´°¿Ú");
+		Thread t1 = new Thread(d,"ä¸€å·çª—å£");
+		Thread t2 = new Thread(d,"äºŒå·çª—å£");
+		Thread t3 = new Thread(d,"ä¸‰å·çª—å£");
+		Thread t4 = new Thread(d,"å››å·çª—å£");
 		t1.start();
 		t2.start();
 		t3.start();

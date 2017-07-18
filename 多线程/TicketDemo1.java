@@ -1,8 +1,8 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /*
- * ÔËÓÃµÚÒ»ÖÖ´´½¨Ïß³ÌµÄ·½·¨
- * Thread.currentThread().getName() »ñÈ¡µ±Ç°Ïß³ÌµÄÃû×Ö
- * ¶øÇÒĞèÒª°ÑÆ±µÄÊıÁ¿ ¶¨Òå³É¾²Ì¬±äÁ¿ ¹²ÏíÊı¾İ
+ * è¿ç”¨ç¬¬ä¸€ç§åˆ›å»ºçº¿ç¨‹çš„æ–¹æ³•
+ * Thread.currentThread().getName() è·å–å½“å‰çº¿ç¨‹çš„åå­—
+ * è€Œä¸”éœ€è¦æŠŠç¥¨çš„æ•°é‡ å®šä¹‰æˆé™æ€å˜é‡ å…±äº«æ•°æ®
  * */
 class Ticket extends Thread{
 	private static int num = 100;
@@ -14,10 +14,10 @@ class Ticket extends Thread{
 	public void run(){
 		while(true){
 			if(num>0){
-				System.out.println("["+Thread.currentThread().getName()+"]"+"ÊÛ³ö£º"+num--+"ºÅÆ±");
+				System.out.println("["+Thread.currentThread().getName()+"]"+"å”®å‡ºï¼š"+num--+"å·ç¥¨");
 			}
 			else{
-				System.out.println("Æ±ÒÑÊÛ¹â");
+				System.out.println("ç¥¨å·²å”®å…‰");
 				break;
 			}
 		}
@@ -26,10 +26,10 @@ class Ticket extends Thread{
 
 public class TicketDemo1 {
 	public static void main(String[] args) {
-		Ticket t1 = new Ticket("Ò»ºÅ´°¿Ú");
-		Ticket t2 = new Ticket("¶şºÅ´°¿Ú");
-		Ticket t3 = new Ticket("ÈıºÅ´°¿Ú");
-		Ticket t4 = new Ticket("ËÄºÅ´°¿Ú");
+		Ticket t1 = new Ticket("ä¸€å·çª—å£");
+		Ticket t2 = new Ticket("äºŒå·çª—å£");
+		Ticket t3 = new Ticket("ä¸‰å·çª—å£");
+		Ticket t4 = new Ticket("å››å·çª—å£");
 		t1.start();
 		t2.start();
 		t3.start();

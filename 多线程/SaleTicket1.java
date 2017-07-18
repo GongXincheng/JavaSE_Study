@@ -1,13 +1,13 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /*
- * 2017Äê7ÔÂ15ÈÕ 18:41:40
+ * 2017å¹´7æœˆ15æ—¥ 18:41:40
  * 
- * ÓÃµÚÒ»ÖÖ·½·¨ÊµÏÖ£º¼Ì³ĞThreadÀà
+ * ç”¨ç¬¬ä¸€ç§æ–¹æ³•å®ç°ï¼šç»§æ‰¿Threadç±»
  * */
 
 class Tickett extends Thread
 {
-	private static int num = 100;	//Èç¹ûÊ¹ÓÃµÚÒ»ÖÖ·½·¨£¬±ØĞë¾²Ì¬²ÅÄÜ½â¾ö
+	private static int num = 100;	//å¦‚æœä½¿ç”¨ç¬¬ä¸€ç§æ–¹æ³•ï¼Œå¿…é¡»é™æ€æ‰èƒ½è§£å†³
 	Tickett(String name){
 		super(name);
 	}
@@ -19,10 +19,10 @@ class Tickett extends Thread
 	{
 		while(true){
 			if(num>0){
-				System.out.println("["+Thread.currentThread().getName()+"]ÊÛ³ö£º"+ num-- +"ºÅÆ±");	
+				System.out.println("["+Thread.currentThread().getName()+"]å”®å‡ºï¼š"+ num-- +"å·ç¥¨");	
 			}
 			else{
-				System.out.println("Æ±ÒÑÊÛ¿Õ");
+				System.out.println("ç¥¨å·²å”®ç©º");
 				break;
 			}
 		}
@@ -31,10 +31,10 @@ class Tickett extends Thread
 
 public class SaleTicket1 {
 	public static void main(String[] args) {
-		Tickett t1 = new Tickett("Ò»ºÅ´°¿Ú");
-		Tickett t2 = new Tickett("¶şºÅ´°¿Ú");
-		Tickett t3 = new Tickett("ÈıºÅ´°¿Ú");
-		Tickett t4 = new Tickett("ËÄºÅ´°¿Ú");
+		Tickett t1 = new Tickett("ä¸€å·çª—å£");
+		Tickett t2 = new Tickett("äºŒå·çª—å£");
+		Tickett t3 = new Tickett("ä¸‰å·çª—å£");
+		Tickett t4 = new Tickett("å››å·çª—å£");
 		t1.start();
 		t2.start();
 		t3.start();

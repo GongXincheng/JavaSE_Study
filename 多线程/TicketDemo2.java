@@ -1,4 +1,4 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 
 class Ticket1 implements Runnable{
 	private int num = 100;
@@ -6,10 +6,10 @@ class Ticket1 implements Runnable{
 	
 	public void run(){
 		while(true){
-			//Í¬²½
+			//åŒæ­¥
 			synchronized (obj) {
 				if(num>0){
-					//ÈÃÏß³ÌÔİÊ±¶³½á10ºÁÃë£¬ÎªÁË¼ìÑéÎÊÌâ
+					//è®©çº¿ç¨‹æš‚æ—¶å†»ç»“10æ¯«ç§’ï¼Œä¸ºäº†æ£€éªŒé—®é¢˜
 					try {
 						Thread.sleep(30);
 					} catch (InterruptedException e) {
@@ -17,10 +17,10 @@ class Ticket1 implements Runnable{
 						e.printStackTrace();
 					}
 					
-					System.out.println("["+Thread.currentThread().getName()+"]"+"ÊÛ³ö£º"+num--+"ºÅÆ±");
+					System.out.println("["+Thread.currentThread().getName()+"]"+"å”®å‡ºï¼š"+num--+"å·ç¥¨");
 				}
 				else{
-					System.out.println("["+Thread.currentThread().getName()+"]£º"+"Æ±ÒÑÊÛ¹â");
+					System.out.println("["+Thread.currentThread().getName()+"]ï¼š"+"ç¥¨å·²å”®å…‰");
 					break;
 				}
 			}		
@@ -31,10 +31,10 @@ class Ticket1 implements Runnable{
 public class TicketDemo2 {
 	public static void main(String[] args) {
 		Ticket1 d = new Ticket1();
-		Thread t1 = new Thread(d,"Ò»ºÅ´°¿Ú");
-		Thread t2 = new Thread(d,"¶şºÅ´°¿Ú");
-		Thread t3 = new Thread(d,"ÈıºÅ´°¿Ú");
-		Thread t4 = new Thread(d,"ËÄºÅ´°¿Ú");
+		Thread t1 = new Thread(d,"ä¸€å·çª—å£");
+		Thread t2 = new Thread(d,"äºŒå·çª—å£");
+		Thread t3 = new Thread(d,"ä¸‰å·çª—å£");
+		Thread t4 = new Thread(d,"å››å·çª—å£");
 		t1.start();
 		t2.start();
 		t3.start();

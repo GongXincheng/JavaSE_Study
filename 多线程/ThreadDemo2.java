@@ -1,19 +1,19 @@
-package ¶àÏß³Ì;
-/* 2017Äê7ÔÂ15ÈÕ 17:20:08
+package å¤šçº¿ç¨‹;
+/* 2017å¹´7æœˆ15æ—¥ 17:20:08
 * 
-*	 ´´½¨Ïß³Ì·½Ê½¶ş£º ÊµÏÖRunnable½Ó¿ÚÊµÏÖrun·½·¨
-*		²½Öè£º
-*			1. ÈÃ¸ÃÀàÊµÏÖRunnable·½·¨,ÊµÏÖrun()·½·¨
-*			2. ´´½¨ Thread¶ÔÏó ¹¹ÔìÆ÷ÖĞ´«µİ ¸ÃÀàµÄ¶ÔÏó£º Thread t = new Thread(new xxx())
-*			3. µ÷ÓÃThread¶ÔÏóµÄstart·½·¨ ¿ªÆôÏß³Ì²¢µ÷ÓÃÏß³ÌµÄÈÎÎñrun·½·¨Ö´ĞĞ
+*	 åˆ›å»ºçº¿ç¨‹æ–¹å¼äºŒï¼š å®ç°Runnableæ¥å£å®ç°runæ–¹æ³•
+*		æ­¥éª¤ï¼š
+*			1. è®©è¯¥ç±»å®ç°Runnableæ–¹æ³•,å®ç°run()æ–¹æ³•
+*			2. åˆ›å»º Threadå¯¹è±¡ æ„é€ å™¨ä¸­ä¼ é€’ è¯¥ç±»çš„å¯¹è±¡ï¼š Thread t = new Thread(new xxx())
+*			3. è°ƒç”¨Threadå¯¹è±¡çš„startæ–¹æ³• å¼€å¯çº¿ç¨‹å¹¶è°ƒç”¨çº¿ç¨‹çš„ä»»åŠ¡runæ–¹æ³•æ‰§è¡Œ
 *
-*		ÖØÒª£º½«Ïß³ÌµÄÈÎÎñ½øĞĞÁË¶ÔÏóµÄ·â×¡£¬·â×°µ½ÁËrunnable¡®µÄ×ÓÀàÖĞ
+*		é‡è¦ï¼šå°†çº¿ç¨‹çš„ä»»åŠ¡è¿›è¡Œäº†å¯¹è±¡çš„å°ä½ï¼Œå°è£…åˆ°äº†runnableâ€˜çš„å­ç±»ä¸­
 */
 
 class Fu{}	
-						//ÒòÎªDemo1¼Ì³ĞÁËFuÀà£¬¾Í²»ÄÜ¼Ì³ĞThreadÀà£¬java²»Ö§³Ö¶à¼Ì³Ğ
-class Demo1 extends Fu implements Runnable  //×¼±¸À©Õ¹Demo1Àà£¬ÈÃÆäÖĞµÄÄÚÈİ×÷ÎªÏß³ÌµÄÈÎÎñÖ´ĞĞ
-{						//Í¨¹ıÊµÏÖ½Ó¿ÚÀ´Ö´ĞĞ
+						//å› ä¸ºDemo1ç»§æ‰¿äº†Fuç±»ï¼Œå°±ä¸èƒ½ç»§æ‰¿Threadç±»ï¼Œjavaä¸æ”¯æŒå¤šç»§æ‰¿
+class Demo1 extends Fu implements Runnable  //å‡†å¤‡æ‰©å±•Demo1ç±»ï¼Œè®©å…¶ä¸­çš„å†…å®¹ä½œä¸ºçº¿ç¨‹çš„ä»»åŠ¡æ‰§è¡Œ
+{						//é€šè¿‡å®ç°æ¥å£æ¥æ‰§è¡Œ
 	public void run() {
 		show();
 	}						
@@ -27,7 +27,7 @@ class Demo1 extends Fu implements Runnable  //×¼±¸À©Õ¹Demo1Àà£¬ÈÃÆäÖĞµÄÄÚÈİ×÷ÎªÏ
 public class ThreadDemo2{
 	public static void main(String[] args) {
 		Demo1 d = new Demo1();
-		Thread t1 = new Thread(d,"ÕÅÈı");
+		Thread t1 = new Thread(d,"å¼ ä¸‰");
 		Thread t2 = new Thread(d,"wangcai");
 		t1.start();
 		t2.start();

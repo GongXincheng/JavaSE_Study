@@ -1,9 +1,9 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /*
- * 2017Äê7ÔÂ15ÈÕ 20:32:19
+ * 2017å¹´7æœˆ15æ—¥ 20:32:19
  * 
- *  ´´½¨Ïß³Ì·½Ê½¶ş£º ÊµÏÖRunnable½Ó¿ÚÊµÏÖrun·½·¨
- *	ÔËÓÃÍ¬²½´úÂë¿é
+ *  åˆ›å»ºçº¿ç¨‹æ–¹å¼äºŒï¼š å®ç°Runnableæ¥å£å®ç°runæ–¹æ³•
+ *	è¿ç”¨åŒæ­¥ä»£ç å—
  */
 
 class Tickett1 implements Runnable{
@@ -12,19 +12,19 @@ class Tickett1 implements Runnable{
 	
 	public void sale(){
 		while(true){
-			synchronized(this /*obj*/ ){	//Í¬²½´úÂë¿é
+			synchronized(this /*obj*/ ){	//åŒæ­¥ä»£ç å—
 				if(num>0){
 					try {
-						//ÎªÁË¼ìÑéÏß³Ì°²È«ÎÊÌâ
-						Thread.sleep(25);	//Ïß³ÌsleepÊ±£¬»áÅ×³ö InterruptedException Òì³£
+						//ä¸ºäº†æ£€éªŒçº¿ç¨‹å®‰å…¨é—®é¢˜
+						Thread.sleep(25);	//çº¿ç¨‹sleepæ—¶ï¼Œä¼šæŠ›å‡º InterruptedException å¼‚å¸¸
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					System.out.println("["+Thread.currentThread().getName()+"]ÊÛ³ö£º"+ num-- +"ºÅÆ±");
+					System.out.println("["+Thread.currentThread().getName()+"]å”®å‡ºï¼š"+ num-- +"å·ç¥¨");
 				}
 				else{
-					System.out.println("Æ±ÒÑÊÛ¿Õ");
+					System.out.println("ç¥¨å·²å”®ç©º");
 					break;
 				}
 			}
@@ -38,10 +38,10 @@ class Tickett1 implements Runnable{
 public class SaleTicket2 {
 	public static void main(String[] args) {
 		Tickett1 t = new Tickett1();
-		Thread t1 = new Thread(t,"Ò»ºÅ´°¿Ú");
-		Thread t2 = new Thread(t,"¶şºÅ´°¿Ú");
-		Thread t3 = new Thread(t,"ÈıºÅ´°¿Ú");
-		Thread t4 = new Thread(t,"ËÄºÅ´°¿Ú");
+		Thread t1 = new Thread(t,"ä¸€å·çª—å£");
+		Thread t2 = new Thread(t,"äºŒå·çª—å£");
+		Thread t3 = new Thread(t,"ä¸‰å·çª—å£");
+		Thread t4 = new Thread(t,"å››å·çª—å£");
 		t1.start();
 		t2.start();
 		t3.start();

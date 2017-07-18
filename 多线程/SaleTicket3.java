@@ -1,9 +1,9 @@
-package ¶àÏß³Ì;
+package å¤šçº¿ç¨‹;
 /*
- * 	2017Äê7ÔÂ15ÈÕ 22:17:04
+ * 	2017å¹´7æœˆ15æ—¥ 22:17:04
  * 
- * 	ĞŞ¸Ä£ºÔËÓÃÍ¬²½´úÂëº¯Êı£¬²¢ÑéÖ¤Í¬²½º¯ÊıµÄËøÊÇË­
- *	´ğ°¸£ºÍ¬²½º¯ÊıµÄËøÊÇ£ºthis  
+ * 	ä¿®æ”¹ï¼šè¿ç”¨åŒæ­¥ä»£ç å‡½æ•°ï¼Œå¹¶éªŒè¯åŒæ­¥å‡½æ•°çš„é”æ˜¯è°
+ *	ç­”æ¡ˆï¼šåŒæ­¥å‡½æ•°çš„é”æ˜¯ï¼šthis  
  */
 
 class Tickett2 implements Runnable{
@@ -13,16 +13,16 @@ class Tickett2 implements Runnable{
 		while(true){
 			sale();
 			if(num<=0){
-				System.out.println("Æ±ÒÑÊÛ¿Õ");
+				System.out.println("ç¥¨å·²å”®ç©º");
 				break;
 			}
 		}
 	}
 	
-	public synchronized void sale(){	//Í¬²½º¯ÊıµÄËøÎª this
-		if(num>0){									//ÎªÁË¼ìÑéÏß³Ì°²È«ÎÊÌâ
-			try { Thread.sleep(25); } catch (InterruptedException e){}	//Ïß³ÌsleepÊ±£¬»áÅ×³ö InterruptedException Òì³£
-			System.out.println("["+Thread.currentThread().getName()+"]ÊÛ³ö£º"+ num-- +"ºÅÆ±");
+	public synchronized void sale(){	//åŒæ­¥å‡½æ•°çš„é”ä¸º this
+		if(num>0){									//ä¸ºäº†æ£€éªŒçº¿ç¨‹å®‰å…¨é—®é¢˜
+			try { Thread.sleep(25); } catch (InterruptedException e){}	//çº¿ç¨‹sleepæ—¶ï¼Œä¼šæŠ›å‡º InterruptedException å¼‚å¸¸
+			System.out.println("["+Thread.currentThread().getName()+"]å”®å‡ºï¼š"+ num-- +"å·ç¥¨");
 		}
 	}
 }
@@ -30,10 +30,10 @@ class Tickett2 implements Runnable{
 public class SaleTicket3 {
 	public static void main(String[] args) {
 		Tickett2 t = new Tickett2();
-		Thread t1 = new Thread(t,"Ò»ºÅ´°¿Ú");
-		Thread t2 = new Thread(t,"¶şºÅ´°¿Ú");
-		Thread t3 = new Thread(t,"ÈıºÅ´°¿Ú");
-		Thread t4 = new Thread(t,"ËÄºÅ´°¿Ú");
+		Thread t1 = new Thread(t,"ä¸€å·çª—å£");
+		Thread t2 = new Thread(t,"äºŒå·çª—å£");
+		Thread t3 = new Thread(t,"ä¸‰å·çª—å£");
+		Thread t4 = new Thread(t,"å››å·çª—å£");
 		t1.start();
 		t2.start();
 		t3.start();
