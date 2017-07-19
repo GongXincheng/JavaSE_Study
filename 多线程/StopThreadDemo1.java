@@ -8,8 +8,12 @@ package 多线程;
  * 		2.run()方法结束。
  * 			(1)怎么控制线程的任务结束呢？	
  * 				任务中都会有循环结构，只要控制住循环就可以结束任务，从而结束该线程，
- *				 控制循环通常就用定义标记来完成
+ *				 控制循环通常就用定义标记来完成，
+ *			但是：如果线程处于了冻结状态，无法读取标记。如何结束呢？
  * 			
+ * 			(2)可以使用interrupt()方法将线程从冻结状态强制恢复到运行状态中来，
+ * 			         让线程具备CPU的执行资格
+ * 			但是：强制动作会发生InterruptedException异常，记得处理
  * */
 
 
@@ -18,9 +22,16 @@ package 多线程;
 class StopThread implements Runnable{
 	private boolean flag = true;
 	
-	public void run(){
+	public synchronized void run(){	//若使用同步函数
 		while(flag)
+		{
+			try { wait(); } 	//当线程被冻结，程序挂掉无法终止。
+			catch (InterruptedException e) {
+				System.out.println(Thread.currentThread().getName()+"......"+e);
+			}
+			
 			System.out.println(Thread.currentThread().getName()+".................");
+		}	
 	}
 	
 	public void setFlag(){
