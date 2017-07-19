@@ -48,11 +48,36 @@ public class StirngMethodDemo {
 		 * 		2.7: 将字符串进行连接
 		 * 			String concat(String str);
 		 * 
+		 * 3,判断
+		 * 		3.1：两个字符串内容是否相同
+		 * 			boolean equals(Object obj);
+		 * 			boolean equalsIgnoreCase(String str);	忽略大小写比较字符串内容
+		 * 		3.2: 字符串中是否包含指定字符串
+		 * 			boolean contains(String str);
+		 * 		3.3: 字符串是否以指定字符串开头，否以指定字符串结尾
+		 * 			boolean startsWith(String str);
+		 * 			boolean endsWith(String str);
+		 * 
+		 * 4,比较
+		 * 		
 		 */
-		stringMethodDemo_2();
+		stringMethodDemo_3();
 	}
 	
-	
+//判断
+private static void stringMethodDemo_3() {
+		String s = "abc";
+		System.out.println(s.equals("ABC".toLowerCase()));	//true
+		System.out.println(s.equalsIgnoreCase("ABC"));		//true
+//------------------------------------------------------------------------------------		
+		System.out.println(s.contains("bc"));	//true
+//------------------------------------------------------------------------------------
+		String str = "ArrayDemo.java";
+		System.out.println(str.startsWith("Array"));	//true
+		System.out.println(str.endsWith(".java"));	//true
+	}
+
+
 //转换：
 	private static void stringMethodDemo_2() {
 		String s = "张三.李四.王五.宫新程";
