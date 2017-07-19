@@ -59,7 +59,8 @@ public class StirngMethodDemo {
 		 * 			boolean endsWith(String str);
 		 * 
 		 * 4,比较
-		 * 		
+		 * 		4.1:比较两字符串的大小
+		 * 			int compareTo(String str)
 		 */
 		stringMethodDemo_4();
 	}
