@@ -26,7 +26,9 @@ public class StirngMethodDemo {
 		 * 			int lastIndexOf(int ch, int fromIndex);	从指定的索引开始。
 		 * 			int lastIndexOf(String str);
 		 * 			int lastIndexOf(String str, int fromIndex);
-		 * 
+		 * 		1.4: 获取字符串中的一部分字符串。也叫子串
+		 * 			String substring(int beginIndex, int endIndex);	//包含begin不包含end
+		 * 			String substring(int beginIndex);
 		 */
 		stringMethodDemo_1();
 	}
@@ -37,6 +39,8 @@ public class StirngMethodDemo {
 		System.out.println("char: "+s.charAt(2));	//char: c
 		System.out.println("index: "+s.indexOf('a'));//index: 0
 		System.out.println("lastIndex: "+s.lastIndexOf('a'));//lastIndex: 3
-		System.out.println("index of 'bc': " +s.indexOf("bc"));	//index of 'bc': 1
+		System.out.println("index of 'bc': "+s.indexOf("bc"));	//index of 'bc': 1
+		System.out.println("substring: "+s.substring(2));	//substring: cahjde
+		System.out.println("substring: "+s.substring(2, 4));//substring: ca
 	}
 }
