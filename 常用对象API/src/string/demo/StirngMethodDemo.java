@@ -61,9 +61,14 @@ public class StirngMethodDemo {
 		 * 4,比较
 		 * 		
 		 */
-		stringMethodDemo_3();
+		stringMethodDemo_4();
 	}
-	
+
+//比较
+private static void stringMethodDemo_4() {
+		System.out.println("a".compareTo("c"));	//b:-1   //c:-2
+	}
+
 //判断
 private static void stringMethodDemo_3() {
 		String s = "abc";
