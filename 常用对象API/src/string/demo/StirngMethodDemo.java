@@ -31,9 +31,9 @@ public class StirngMethodDemo {
 		 * 			String substring(int beginIndex);
 		 * 
 		 * 2,转换
-		 * 		2.1： 将字符串变成字符串数组(字符串的切割)
+		 * 		2.1： 将字符串变成字符串数组(切割)
 		 * 			String[] split(String regex);	涉及到正则表达式.
-		 * 		2.2： 将字符串变成字符数组
+		 * 		2.2： 将字符串变成字符数组(单个)
 		 * 			char[] toCharArray();
 		 * 		2.3: 将字符串变成字节数组
 		 * 			byte[] getBytes();
