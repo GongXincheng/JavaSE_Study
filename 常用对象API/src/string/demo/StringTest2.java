@@ -20,7 +20,7 @@ public class StringTest2 {
 		String key = "nba";
 		
 		int count = getKeyStringCount_2(str, key);
-		System.out.println("count = "+count);
+		System.out.println("count = "+count);	// 运行结果：count = 5
 	}
 
 	/**

@@ -26,6 +26,12 @@ public class StringTest3 {
 
 		String s = getMaxSubstring(s2, s1);
 		System.out.println("s=" + s);
+		
+		/*	运行结果：
+		 * max=qwerabcdtyuiop 
+		 * min=xcabcdvbn 
+		 * s=abcd
+		 */
 	}
 
 	/**
