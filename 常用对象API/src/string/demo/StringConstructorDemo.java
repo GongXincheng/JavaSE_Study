@@ -10,9 +10,9 @@ public class StringConstructorDemo {
 	private static void stringConstructorDemo2() {
 		char[] arr = {'w','a','p','q','x'};
 		String s = new String(arr);
-		String s1 = new String(arr, 1, 3);
+		String s1 = new String(arr, 2, 2);
 		System.out.println("s = " +s);	//s = wapqx
-		System.out.println("s1 = " +s1);	//s1 = apq
+		System.out.println("s1 = " +s1);	//s1 = pq
 	}
 
 	private static void stringConstructorDemo1() {
