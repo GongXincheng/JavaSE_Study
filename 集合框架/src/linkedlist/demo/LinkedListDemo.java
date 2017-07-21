@@ -13,7 +13,7 @@ public class LinkedListDemo {
 		link.addFirst("abc2");
 		link.addFirst("abc3");
 		link.addFirst("abc4");
-		System.out.println(link);
+		System.out.println(link);	//[abc4, abc3, abc2, abc1]
 //		System.out.println(link.getFirst());	//abc4		//获取第一个元素，但不删除
 //		System.out.println(link.getFirst());	//abc4
 		
@@ -24,7 +24,7 @@ public class LinkedListDemo {
 		while(!link.isEmpty()){
 			System.out.println(link.removeFirst());	//link.removeLast()
 		}
-		System.out.println(link);
+		System.out.println(link);	//4 3 2 1 
 		
 //		Iterator it = link.iterator();
 //		while(it.hasNext()){
