@@ -89,10 +89,10 @@ List:
 	
 LinkedList:
 
-	addFirst();
-	addLast():
+	addFirst();	// 将指定元素插入此列表的开头。
+	addLast():	// 将指定元素添加到此列表的结尾
 	jdk1.6
-	offerFirst();
+	offerFirst();	
 	offetLast();
 	
 	
