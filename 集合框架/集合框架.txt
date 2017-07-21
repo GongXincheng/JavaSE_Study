@@ -87,3 +87,25 @@ List:
 	
 	
 	
+LinkedList:
+
+	addFirst();
+	addLast():
+	jdk1.6
+	offerFirst();
+	offetLast();
+	
+	
+	getFirst();.//获取但不移除，如果链表为空，抛出NoSuchElementException.
+	getLast();
+	jdk1.6
+	peekFirst();//获取但不移除，如果链表为空，返回null.
+	peekLast():
+	
+	removeFirst();//获取并移除，如果链表为空，抛出NoSuchElementException.
+	removeLast();
+	jdk1.6
+	pollFirst();//获取并移除，如果链表为空，返回null.
+	pollLast();
+	
+	
