@@ -139,11 +139,6 @@ Set:元素不可以重复，是无序。
 				可以使用TreeSet集合第二种排序方式二：
 				让集合自身具备比较功能，定义一个类实现Comparator接口，覆盖compare方法。
 				将该类对象作为参数传递给TreeSet集合的构造函数。
-				
-				
-
-
-if(this.hashCode()== obj.hashCode() && this.equals(obj))
 
 
 
@@ -154,5 +149,42 @@ if(this.hashCode()== obj.hashCode() && this.equals(obj))
 2，判断哈希值相同，其实判断的是对象的hashCode的方法。判断内容相同，用的是equals方法。
 
 注意：如果哈希值不同，是不需要判断equals。
+
+
+
+
+
+
+
+
+										Collection
+											|
+											
+						|                                       |
+					  List			
+					  						  				   Set
+
+			|			|			|					|				|
+		  Vector	ArrayList	LinkedList			HashSet			TreeSet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	
