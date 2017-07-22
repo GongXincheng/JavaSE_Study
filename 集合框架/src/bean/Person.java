@@ -15,6 +15,37 @@ public class Person {
 		this.age = age;
 	}
 	
+	
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		System.out.println(this+".....hashcode方法..");
+		
+		return name.hashCode()+age;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		
+		if(this == obj)		//如果传同一个对象
+			return true;
+		if(! (obj instanceof Person))	//如果类型不同 抛出异常
+			throw new ClassCastException("类型不对~");
+			
+		System.out.println(this +".....equals方法...." +obj);
+		Person p = (Person)obj;	
+		
+		return this.name.equals(p.name) && this.age == p.age;
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return name+":"+age;
+	}
+	
+	
 	public String getName() {
 		return name;
 	}
@@ -27,6 +58,8 @@ public class Person {
 	public void setAge(int age) {
 		this.age = age;
 	}
+
+	
 	
 	
 }
