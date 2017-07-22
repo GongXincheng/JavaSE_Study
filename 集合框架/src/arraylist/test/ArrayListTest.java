@@ -22,7 +22,7 @@ public class ArrayListTest {
 		
 		Iterator it = al.iterator();
 		while(it.hasNext()){
-			Person p = (Person)it.next();	//注意强转！ 因为it.next()返回的是Object类型
+			Person p = (Person)it.next();	//注意强转！ 因为it.next()返回的是Object类型 
 			System.out.println(p.getName()+ "::" + p.getAge());
 		}
 		
