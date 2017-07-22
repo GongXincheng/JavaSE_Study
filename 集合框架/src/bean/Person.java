@@ -1,6 +1,6 @@
 package bean;
 
-public class Person {
+public class Person implements Comparable{
 	private String name;
 	private int age;
 	
@@ -59,6 +59,31 @@ public class Person {
 	}
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+//		System.out.println("------compareTo------");
+		Person p = (Person)o;
+		
+		
+		int temp = this.age - p.getAge() ;	//如果年龄相同比较名字
+		return temp==0 ? this.name.compareTo(p.getName()) : temp ;
+		
+//		int temp = this.name.compareTo(p.getName());//如果名字相同比较年龄
+//		return temp==0 ? this.age-p.getAge() : temp;
+		
+/*		
+		if(this.age>p.age)
+			return -1;
+		if(this.age<p.age)
+			return 1;
+		if(this.age == p.age)
+			return this.name.compareTo(p.name);
+	
+		return 0;
+*/	
 	}
 
 	
