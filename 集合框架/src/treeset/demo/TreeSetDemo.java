@@ -16,7 +16,7 @@ public class TreeSetDemo {
 		 * 以Person对象的年龄进行从小到大的排序
 		 * 	重写了 Person 的 compareTo() 方法；
 		 */
-		TreeSet ts = new TreeSet();
+		TreeSet ts = new TreeSet(/*new ComparatorByName()*/);
 		
 		ts.add(new Person("lisi", 21));
 		ts.add(new Person("wangwu", 29));
