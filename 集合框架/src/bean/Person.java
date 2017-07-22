@@ -67,7 +67,6 @@ public class Person implements Comparable{
 //		System.out.println("------compareTo------");
 		Person p = (Person)o;
 		
-		
 		int temp = this.age - p.getAge() ;	//如果年龄相同比较名字
 		return temp==0 ? this.name.compareTo(p.getName()) : temp ;
 		
