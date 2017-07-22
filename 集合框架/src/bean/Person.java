@@ -15,11 +15,12 @@ public class Person {
 		this.age = age;
 	}
 	
-	
+
+ // HashSet的时候需要重写这个方法
 	@Override
 	public int hashCode() {
 		// TODO Auto-generated method stub
-		System.out.println(this+".....hashcode方法..");
+//		System.out.println(this+".....hashcode方法..");
 		
 		return name.hashCode()+age;
 	}
@@ -33,12 +34,13 @@ public class Person {
 		if(! (obj instanceof Person))	//如果类型不同 抛出异常
 			throw new ClassCastException("类型不对~");
 			
-		System.out.println(this +".....equals方法...." +obj);
+//		System.out.println(this +".....equals方法...." +obj);
 		Person p = (Person)obj;	
 		
 		return this.name.equals(p.name) && this.age == p.age;
 	}
 
+	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
