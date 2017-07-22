@@ -17,6 +17,8 @@ public class ComparatorByName implements Comparator{
 		int temp = p1.getName().compareTo(p2.getName());
 		
 		return temp==0 ? p1.getAge()-p2.getAge() : temp;
+		
+//		return 1;  //有序输出     return -1; 逆序输出
 	}
 
 }
