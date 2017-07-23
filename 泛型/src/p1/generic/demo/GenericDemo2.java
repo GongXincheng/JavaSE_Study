@@ -10,7 +10,7 @@ public class GenericDemo2 {
 	
 	public static void main(String[] args) {
 		
-		TreeSet<Person> ts = new TreeSet<Person>(new ComparatorByName());
+		TreeSet<Person> ts = new TreeSet<Person>(new ComparatorByName());//比较器
 		
 		ts.add(new Person("lisi8", 21));
 		ts.add(new Person("lisi3", 23));
