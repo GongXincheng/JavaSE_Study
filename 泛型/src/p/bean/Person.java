@@ -35,6 +35,12 @@ public class Person implements Comparable<Person> {
 		
 		return temp==0 ? this.name.compareTo(o.name) : temp;
 	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Person: "+name+": "+age;
+	}
 	
 	
 }
