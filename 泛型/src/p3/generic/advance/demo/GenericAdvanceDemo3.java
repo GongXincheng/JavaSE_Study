@@ -3,8 +3,6 @@ package p3.generic.advance.demo;
  * 2017年7月23日 17:12:41
  */
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import p.bean.Person;
 import p.bean.Student;
 import p.bean.Worker;
