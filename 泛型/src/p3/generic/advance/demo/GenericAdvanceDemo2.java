@@ -42,7 +42,8 @@ public class GenericAdvanceDemo2 {
 	 * 
 	 * @param al
 	 */
-	private static void printCollection(Collection<? extends Person> al) {	//未知集合继承Person
+	private static void printCollection(Collection<? extends Person> al) {	
+											//Collection<? extends Person> al = new ArrayList<Worker>;
 		Iterator<? extends Person> it = al.iterator();
 		while(it.hasNext()){
 //			System.out.println(it.next().toString());
