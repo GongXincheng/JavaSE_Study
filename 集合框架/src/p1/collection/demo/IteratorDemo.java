@@ -1,4 +1,4 @@
-package collection.demo;
+package p1.collection.demo;
 /*
  * 2017年7月21日12:42:58
  * 

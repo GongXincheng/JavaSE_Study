@@ -1,4 +1,4 @@
-package collection.demo;
+package p1.collection.demo;
 
 import java.util.ArrayList;
 import java.util.Collection;
