@@ -3,7 +3,7 @@ package p2.generic.define.demo;
 import p.bean.Student;
 import p.bean.Worker;
 
-public class GenericDefineDemo {
+public class GenericDefineDemo1 {
 	public static void main(String[] args) {
 		
 		Tool<Student> tool = new Tool<Student>();
