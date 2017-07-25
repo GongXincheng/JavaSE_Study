@@ -6,9 +6,9 @@ import java.util.List;
 /*
  * 2017年7月25日 10:20:17
  * 
- * 二分查找： Collections.binarySearch(List<T>, T key);
- * 获取最大值 ：Collection.max(Collection<T>)
- *				Collection.max(Collection<T> , 比较器)
+ * 二分查找： Collections.binarySearch(List<T> list, T key);
+ * 获取最大值 ：Collection.max(Collection<T> coll)
+ *				Collection.max(Collection<T> coll, 比较器)
  */
 
 public class CollectionsDemo2 {

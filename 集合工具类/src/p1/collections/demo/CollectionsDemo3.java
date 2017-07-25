@@ -2,11 +2,17 @@ package p1.collections.demo;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.TreeSet;
 /*
  * 2017年7月25日 10:20:17
+ * 
+ * 逆序：Collections.reverseOrder();
+ * 		 Collections.reverseOrder(自定义比较器对象)
+ * 		实际上他们的返回值 为一个比较器对象
+ * 
+ * List直接逆序:
+ * 		 Collections.reverse(List<?> list);	无返回值
  */
 
 public class CollectionsDemo3 {
@@ -29,15 +35,15 @@ public class CollectionsDemo3 {
 			}
 		});
 */		
-//		TreeSet<String> ts = new TreeSet<String>(Collections.reverseOrder());
+//		TreeSet<String> ts = new TreeSet<String>(Collections.reverseOrder());	//默认逆序
 		TreeSet<String> ts = new TreeSet<String>(Collections.reverseOrder(new ComparatorByLength()));
-		ts.add("abc");
+		ts.add("abc");											//自定义比较器逆序
 		ts.add("hahaha");
 		ts.add("zzz");
 		ts.add("aa");
 		ts.add("cba");
 		
-		System.out.println(ts);
+		System.out.println(ts);	//	[hahaha, zzz, cba, abc, aa]
 	}
 	
 	

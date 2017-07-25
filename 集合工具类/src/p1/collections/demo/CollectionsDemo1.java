@@ -1,10 +1,14 @@
 package p1.collections.demo;
 /*
  * 2017年7月25日 10:19:27
- * 排序：Collections.sort(List<T>);
+ * Collections ：是集合工具类
+ * 里面的方法都是静态的。
+ * 
+ * 排序：Collections.sort(List<T> list);
+ * 
  * 		Collections.sort(List<T>, 比较器);
- * 		Collection.sort(List<T>, Collections.reverseOrder())	//逆序
- * 		Collection.sort(List<T>, Collections.reverseOrder(比较器))	//自定义比较器逆序
+ * 			Collection.sort(List<T>, Collections.reverseOrder())	//逆序
+ * 			Collection.sort(List<T>, Collections.reverseOrder(比较器))	//自定义比较器逆序
  */
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,10 +19,7 @@ public class CollectionsDemo1 {
 
 	public static void main(String[] args) {
 		
-		/*
-		 * Collections ：是集合工具类
-		 * 里面的方法都是静态的。
-		 */
+		
 		demo_1();
 	}
 
