@@ -5,6 +5,10 @@ import java.util.Collections;
 import java.util.List;
 /*
  * 2017年7月25日 10:20:17
+ * 
+ * 二分查找： Collections.binarySearch(List<T>, T key);
+ * 获取最大值 ：Collection.max(Collection<T>)
+ *				Collection.max(Collection<T> , 比较器)
  */
 
 public class CollectionsDemo2 {
@@ -27,8 +31,11 @@ public class CollectionsDemo2 {
 		int index = Collections.binarySearch(list, "cba");	//二分查找
 		System.out.println(index);
 		
-		String max = Collections.max(list, new ComparatorByLength());	//获取最大值
-		System.out.println(max);
+		String max1 = Collections.max(list);	//
+		System.out.println(max1);
+		
+		String max2 = Collections.max(list, new ComparatorByLength());	//获取最大值
+		System.out.println(max2);
 	}
 	
 }
