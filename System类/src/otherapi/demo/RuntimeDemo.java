@@ -1,4 +1,4 @@
-package otherapi;
+package otherapi.demo;
 
 import java.io.IOException;
 
