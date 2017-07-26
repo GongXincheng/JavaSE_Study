@@ -8,7 +8,7 @@ System: 类中的方法和属性都是静态的。
 			获取系统的属性信息，并存储了Properties集合中
 			Properties集合中存储的都是String类型的键和值
 			最好使用他自己的存储和取出的方法来完成
-			Properties对象的 stringPropertyNames()方法获取集合的键封装到Set集合中
+			Properties对象的 stringPropertyNames()方法获取集合的键封 装到Set集合中
 			setProperty(String key, String value)
 	
 	
@@ -35,7 +35,7 @@ Math：提供了操作数学运算的方法。都是静态的
 		  double pow(double a, double b)  返回第一个参数的第二个参数次幂的值。
 
 
-Date:
+Date:	日期
 
 	/**
 	 * 日期对象和毫秒值之间的转换
@@ -66,3 +66,31 @@ Date:
 	 			eg:  Date date = dateFormat.parse(date_str);
 
 
+
+
+Calendar：	日历
+
+获取日历实例：
+		Calendar c = Calendar.getInstance();
+		
+获取 年月日周
+		int year = c.get(Calendar.YEAR);
+		int month = c.get(Calendar.MONTH)+1;
+		int day = c.get(Calendar.DAY_OF_MONTH);
+		String week = c.get(Calendar.DAY_OF_WEEK);
+
+重新设置日历
+		c.set(year, 2, 1);
+
+日历偏移
+		c.add(Calendar.DAY_OF_MONTH, -1);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
