@@ -1,0 +1,68 @@
+System: 类中的方法和属性都是静态的。
+
+常见方法：
+	
+	->	long currentTimeMillis() ;		 返回以毫秒为单位的当前时间
+		
+	-> 	Properties getProperties() ;	确定当前的系统属性
+			获取系统的属性信息，并存储了Properties集合中
+			Properties集合中存储的都是String类型的键和值
+			最好使用他自己的存储和取出的方法来完成
+			Properties对象的 stringPropertyNames()方法获取集合的键封装到Set集合中
+			setProperty(String key, String value)
+	
+	
+		
+Runtime：没有构造方法摘要，说明该类不可以创建对象
+		 又发现还有非静态的方法，说明该类应该提供静态的返回该类对象的方法
+		 而且只有一个，说明Runtime类使用了单例设计模式
+		 
+		 Runtime r = Runtime.getRuntime();
+		 通过 getRuntime 方法获取当前运行时。返回 Runtime 类实例
+		 r.exec("notepad.exe");	 打开 记事本.exe 
+		 
+		 Process p = r.exec("notepad.exe");	-> r.exec()的返回值类型为Process
+		 p.destroy();	杀掉子进程
+		 
+
+Math：提供了操作数学运算的方法。都是静态的
+		 
+	常用方法：
+		  double ceil(double a)	 返回大于参数的最小整数
+		  double floor(double a) 	 返回小于参数的最大整数
+		  double round(float a) 		 返回四舍五入的整数
+
+		  double pow(double a, double b)  返回第一个参数的第二个参数次幂的值。
+
+
+Date:
+
+	/**
+	 * 日期对象和毫秒值之间的转换
+	 * 
+	 * 毫秒值 -> 日期对象 
+	 * 		1.Date对象的构造方法  new Date(毫秒值);
+	 * 		2.还可以通过 setTime()方法，返回日期对象
+	 *			er: date2.setTime(1501050972857l);		
+	 * 因为可以通过Date对象的方法对该日期中的各个字段（年月日等）进行操作
+	 * 		
+	 *-------------------------------------------------------------------------
+	 *
+	 * 日期对象 -> 毫秒值
+	 * 		2.Date对象的 getTime()方法，返回long 类型;
+	 * 			eg: long time = date3.getTime();
+	 * 因为可以通过具体的数值进行运算	
+	 * 
+	 */
+
+对日期对象进行格式化：
+
+		日期对象 -> 日期格式的字符串:
+				使用的是 DateFormat 的 format()方法   返回字符串对象
+				eg:  String time = dateFormat1.format(date);
+				
+		日期格式的字符串 -> 日期对象
+	 			使用的是 DateFormat 的 parse() 方法	返回日期对象
+	 			eg:  Date date = dateFormat.parse(date_str);
+
+
