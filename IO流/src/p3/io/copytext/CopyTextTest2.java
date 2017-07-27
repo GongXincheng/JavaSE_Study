@@ -1,4 +1,4 @@
-package p3.io.charstream;
+package p3.io.copytext;
 
 import java.io.FileReader;
 import java.io.FileWriter;
