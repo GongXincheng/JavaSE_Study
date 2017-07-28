@@ -13,7 +13,7 @@ public class UDPReceDemo {
 		System.out.println("接收端启动......");
 		/*
 		 * 建立UDP接收端的思路：
-		 * 1.创建UDP的socket服务
+		 * 1.创建UDP的socket服务,因为是要接收数据，必须要明确端口号。
 		 * 2.创建数据包 用于存储接收到的数据，方便用数据包对象的方法解析数据
 		 * 3.使用socket服务的receiver方法，将接收到的数据存储到数据包中
 		 * 4.通过数据包对象的方法，解析数据包中的数据
@@ -21,7 +21,7 @@ public class UDPReceDemo {
 		 */
 		
 		//1.建立UDP的socket服务
-		DatagramSocket ds = new DatagramSocket();
+		DatagramSocket ds = new DatagramSocket(10000);
 		
 		//2.创建数据包 用于存储接收到的数据，方便用数据包对象的方法解析数据
 		byte[] buf = new byte[1024];
