@@ -24,18 +24,18 @@ public class UDPReceDemo2 {
 		DatagramSocket ds = new DatagramSocket(10000);
 		
 		while(true){
-		//2.创建数据包 用于存储接收到的数据，方便用数据包对象的方法解析数据
-		byte[] buf = new byte[1024];
-		DatagramPacket dp = new DatagramPacket(buf, buf.length);
-		
-		//3.使用socket服务的receiver方法，将接收到的数据存储到数据包中
-		ds.receive(dp);	//阻塞式的
-		
-		//4.通过数据包对象的方法，解析数据包中的数据,比如地址，端口，数据内容
-		String ip = dp.getAddress().getHostAddress();
-		int port = dp.getPort();
-		String text = new String(dp.getData(), 0, dp.getLength());
-		System.out.println(ip+":"+port+":"+text);
+			//2.创建数据包 用于存储接收到的数据，方便用数据包对象的方法解析数据
+			byte[] buf = new byte[1024];
+			DatagramPacket dp = new DatagramPacket(buf, buf.length);
+			
+			//3.使用socket服务的receiver方法，将接收到的数据存储到数据包中
+			ds.receive(dp);	//阻塞式的
+			
+			//4.通过数据包对象的方法，解析数据包中的数据,比如地址，端口，数据内容
+			String ip = dp.getAddress().getHostAddress();
+			int port = dp.getPort();
+			String text = new String(dp.getData(), 0, dp.getLength());
+			System.out.println(ip+":"+port+":"+text);
 		}
 		//5.关闭资源
 //		ds.close();
