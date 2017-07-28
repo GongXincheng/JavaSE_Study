@@ -13,7 +13,7 @@ public class IPDemo {
 		InetAddress ip = InetAddress.getLocalHost();//获取本地主机的 IP 地址
 		
 		//获取其他主机的ip地址对象
-		ip = InetAddress.getByName("192.168.1.100");
+		ip = InetAddress.getByName("192.168.1.100");	//afa
 		
 		System.out.println(ip.getHostAddress());	// 返回该IP 的 IP 地址字符串
 		System.out.println(ip.getHostName());		// 获取此 IP 地址的主机名。
